@@ -3,6 +3,33 @@
   width: 96%;
   height: 96%;
   background: green;
-  margin: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 1%;
   font-size: 60px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
 }
+
+body {
+  background: black;
+}
+
+.text {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  min-width: 30%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.bell .background {
+  min-width: 100%;
+  min-height: 100%;
+}
+
