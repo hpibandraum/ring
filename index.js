@@ -13,7 +13,7 @@ function ringTheBell() {
     // http://www.w3schools.com/Ajax/ajax_xmlhttprequest_onreadystatechange.asp
     if (xhttp.readyState == 4) {
       var response = JSON.parse(xhttp.responseText);
-      if (response.ok) {
+      if (response.return_value !== undefined) {
         var secondsToWait = response.return_value;
         if (secondsToWait === parseInt(secondsToWait, 10)) {
           // check for integer from http://stackoverflow.com/a/14636652/1320237
@@ -23,7 +23,7 @@ function ringTheBell() {
             }, secondsToWait * 1000);
         } 
       } else {
-        knopka.innerText= "Error: " + response.error;
+        knopka.innerText= response.error + ": " + response.info;
       }
     }
   }
