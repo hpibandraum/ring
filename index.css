@@ -21,6 +21,7 @@ body {
   top: 40%;
   left: 10%;
   min-width: 30%;
+  max-width: 80%;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   border-radius: 20px;
