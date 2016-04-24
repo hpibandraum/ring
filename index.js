@@ -23,7 +23,13 @@ function ringTheBell() {
             }, secondsToWait * 1000);
         } 
       } else {
-        knopka.innerText= response.error + ": " + response.info;
+        var message;
+        if (response.error !== undefined) {
+          message = response.error + ": " + response.info;
+        } else {
+          message = xhttp.responseText;
+        }
+        knopka.innerText = message;
       }
     }
   }
